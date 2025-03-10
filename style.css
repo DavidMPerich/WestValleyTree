@@ -1,10 +1,10 @@
-/*REMOVE DEFAULTS*/
+/* Common Styles */
 * {
     margin: 0;
     padding: 0;
     outline: none;
     box-sizing: border-box;
-    list-style: none;
+    list-style-type: none;
     text-decoration: none;
 }
 
@@ -12,80 +12,88 @@ html {
     font-size: 62.5%;
 }
 
-.hamburger-menu {
-    width: 3rem;
-    height: 3rem;
-    position: fixed;
-    top: 5rem;
-    right: 5rem;
-    z-index: 200;
+:root {
+    --green: #6B705C;
+    --blue: #5C6B70;
+    --purple: #705C6B;
+    --white: #dad7cd;
+}
+
+/* .center {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    cursor: pointer;
-    
-}
+    justify-content: center;
+    align-items: center;
+} */
+/* End of Common Styles */
 
-.line {
-    width: 100%;
-    height: 0.2rem;
-    background-color: #dce0d9;
-    box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.2);
-}
-
-.header {
+/* Section 1 */
+.section-1 {
     width: 100%;
     height: 100vh;
+    background-color: var(--green);
+    /* background-image: url('images/bg1.jpg'); */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     position: relative;
-    perspective: 100rem;
-    overflow: hidden;
 }
 
-.img-wrapper {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: hidden;
+/* Logo */
+.logo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
 }
 
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-    animation: scale 25s;
+.logo i {
+    font-size: 5rem;
+    color: var(--white);
+}
+/* End of Logo */
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 3rem;
+    right: 5%;
 }
 
-@keyframes scale {
-    0% {
-        transform: scale(1.3);
-    }
-    100% {
-        transform: scale(1);
-    }
+.navbar-link {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin: 1rem 3rem;
+    color: var(--white);
+    transition: transform 0.5s;
 }
 
-.banner {
+.navbar-link:hover {
+    transform: scale(1.5);
+}
+/* End of Navbar */
+
+/* Banner */
+.section-1-banner {
     position: absolute;
     top: 30%;
     left: 15%;
 }
 
-.banner h1 {
+.section-1-banner h1 {
     font-family: "Noto Serif", serif;
+    width: 100%;
     font-size: 8rem;
-    font-weight: 300;
-    color: #dce0d9;
+    font-weight: 400;
+    color: var(--white);
     letter-spacing: 0.4rem;
     text-shadow: 0.3rem 0.3rem rgba(0,0,0,0.4);
     opacity: 0;
     animation: moveBanner 1s 0.5s forwards;
 }
 
-.banner p {
+.section-1-banner p {
     font-family: "Josefin Sans", sans-serif;
     font-size: 2.5rem;
-    color: #dce0d9;
+    color: var(--white);
     width: 60%;
     letter-spacing: 0.1rem;
     margin-bottom: 3rem;
@@ -94,17 +102,16 @@ html {
     animation: moveBanner 1s 0.7s forwards;
 }
 
-/* Change this */
-.banner button {
+.section-1-banner button {
     width: 25rem;
-    height: 7rem;
-    background-color: #71816d;
-    border: none;
+    height: 5rem;
+    background-color: var(--green);
+    /* border: none; */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    text-transform: uppercase;
-    color: #dce0d9;
+    /* text-transform: uppercase; */
+    color: var(--white);
     text-shadow: 0.3rem 0.2rem rgba(0,0,0,0.2);
     box-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.4);
     cursor: pointer;
@@ -121,3 +128,5 @@ html {
         opacity: 1;
     }
 }
+/* End of Banner */
+/* End of Section 1 */
