@@ -10,6 +10,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -164,97 +165,47 @@ html {
 /* Section 2 */
 .section-2 {
     width: 100%;
-    height: 120vh;
-    padding: 10vh 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    height: 100%;
+    background-color: green;
 }
 
 .section-2-heading {
-    font-size: 10rem;
-    font-weight: 200;
-    color: var(--white);
-    position: relative;
-    margin-bottom: 5rem;
+
 }
 
-.section-2-heading::before {
-    content: "";
-    width: 130%;
-    height: 30vw;
-    background-image: linear-gradient(var(--blue), var(--purple));
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: skewX(-50deg);
-    transform-origin: left top;
-    z-index: -1;
+.section-2-content {
+
 }
 
-.action-shots {
-    height: 60vh;
-    width: 50vw;
-    background-image: linear-gradient(var(--green), var(--white));
-    border-radius: 0.5rem;;
+
+/* Section 3 */
+.section-3 {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
 }
 
-.action-shots img {
-    width: inherit;
-    height: inherit;
-    object-fit: contain;
-    position: absolute;
-    transition: opacity 3s;
+.section-3-heading {
+
 }
 
-.action-shot-2 {
-    opacity: 0;
+.section-3-content {
+
 }
 
-.action-shots:hover .action-shot-1 {
-    opacity: 0;
+/* Section 4 */
+.section-4 {
+    width: 100%;
+    height: 100%;
+    background-color: red;
 }
 
-.action-shots:hover .action-shot-2 {
-    opacity: 1;
+.section-4-heading {
+
 }
 
-.about-btns {
-    display: flex;
+.section-4-content {
+
 }
 
-.about-btn {
-    width: 6rem;
-    height: 6rem;
-    background-image: linear-gradient(to right, rgb(51,51,51) 60%, rgb(82,82,82));
-    margin: 0 3rem;
-    border-radius: 50%;
-    position: relative;
-}
-
-.about-btn::after {
-    content: "";
-    width: 50%;
-    height: 50%;
-    display: block;
-    border: 0.1rem solid #6edae6;
-    border-radius: 1rem;
-}
-
-.about-btn span {
-    position: absolute;
-    top: -3rem;
-    font-size: 1.6rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    color: var(--green);
-    width: max-content;
-    transform: scale(0);
-    transition: transform 0.5s;
-}
-
-.about-btn:hover span {
-    transform: scale(1);
-}
+/* Responsive Design */
